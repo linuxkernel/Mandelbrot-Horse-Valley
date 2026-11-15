@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Seahorse Valley 3D Terrain Generator</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292e; max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: #f6f8fa; }
+        .container { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e1e4e8; }
+        h1 { border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; color: #0366d6; font-size: 2.2em; }
+        h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; color: #24292e; }
+        code { background-color: rgba(27,31,35,0.05); padding: 0.2em 0.4em; border-radius: 3px; font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace; font-size: 85%; }
+        pre { background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; overflow: auto; }
+        pre code { background-color: transparent; padding: 0; }
+        .badge { display: inline-block; padding: 3px 6px; font-size: 12px; font-weight: 600; color: #fff; background-color: #28a745; border-radius: 3px; }
+        .highlight-box { background: #fff8c5; border-left: 4px solid #f1e05a; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mandelbrot Seahorse Valley 3D Terrain & Procedural PBR Shader <span class="badge">Blender Python</span></h1>
+        
+        <p>Welcome to the <strong>Mandelbrot Seahorse Valley</strong> repository! This project features a unified, automated Blender Python script designed to procedurally generate high-fidelity 3D fractal terrain and companion RGBA texture maps using complex number iteration ($z = z^2 + c$). It is tailored specifically for advanced 3D digital art portfolios, procedural world-building, and GPU-accelerated graphics pipelines.</p>
+
+        <h2>🚀 Features</h2>
+        <ul>
+            <li><strong>Procedural BMesh Terrain Generation:</strong> Dynamically builds high-resolution 3D heightmaps using smoothed fractal iteration counts ($z = z^2 + c$) centered over the famous "Seahorse Valley" coordinate region of the Mandelbrot set.</li>
+            <li><strong>Procedural Texture Synthesis:</strong> Generates a 1024x1024 RGBA texture map via NumPy featuring a custom sunset/crimson color gradient and high-contrast normalization.</li>
+            <li><strong>Advanced PBR Gold Shader:</strong> Automatically builds and links a Principled BSDF shader featuring high metallic response (0.94), low roughness (0.16), and procedurally driven normal bump mapping.</li>
+            <li><strong>Clean Automated Pipeline:</strong> Cleans up legacy data blocks, generates geometry, maps UV coordinates, packs images internally, and applies materials in a single execution click.</li>
+        </ul>
+
+        <h2>📋 Requirements</h2>
+        <ul>
+            <li><strong>Blender 4.x / 5.x</strong> (includes Python 3.10+ and NumPy natively).</li>
+            <li>NVIDIA RTX or equivalent GPU recommended for real-time viewport rendering and PBR shader evaluation.</li>
+        </ul>
+
+        <h2>🛠️ Quick Start Guide</h2>
+        <ol>
+            <li>Open Blender and navigate to the <strong>Scripting</strong> workspace.</li>
+            <li>Create a new text block and paste the contents of <code>generate_seahorse_complete.py</code>.</li>
+            <li>Click the play button <strong>(Run Script)</strong> in the text editor header.</li>
+            <li>Switch to <strong>Material Preview</strong> or <strong>Rendered</strong> view in the 3D viewport to inspect your Seahorse Valley terrain!</li>
+        </ol>
+
+        <h2>🎛️ Texture Alignment & Mapping Controls</h2>
+        <div class="highlight-box">
+            <strong>Pro Tip:</strong> If you need to fine-tune texture alignment in the Shading workspace:
+            <ul>
+                <li>Add a <strong>Texture Coordinate</strong> and <strong>Mapping</strong> node between your UVs and the Image Texture node.</li>
+                <li>Toggle <strong>Scale X</strong> or <strong>Scale Y</strong> to <code>-1.0</code> to flip axes interactively.</li>
+            </ul>
+        </div>
+
+        <h2>📜 License</h2>
+        <p>This project is open-source and released under the MIT License. Feel free to use, modify, and integrate into your academic or professional portfolios!</p>
+    </div>
+</body>
+</html>
